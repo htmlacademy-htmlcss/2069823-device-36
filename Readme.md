@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Александр Савичев](https://up.htmlacademy.ru/htmlcss/36/user/2069823).
-* Наставник: `Неизвестно`.
+* Наставник: `Дмитрий (sench) Железцов` https://htmlacademy.ru/profile/sench
 
 ---
 
