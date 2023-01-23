@@ -6,13 +6,14 @@
   </head>
   <body>
     <header class="page-header">
-      <a href="https://htmlacademy.ru/">
-        <img class="logo" src="" alt="Логотип интернет магазина Device"></a>
+      <a class="logo-link" href="https://htmlacademy.ru/">
+        <img class="logo" src="#" alt="Логотип интернет магазина Device"></a>
       <nav class="navigation navigation-user">
         <ul class="navigation-list">
           <li class="navigation-item">
             <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input type="text" placeholder="Поиск по сайту">
+            <label for="search">Поиск</label>
+            <input type="search" id="search" placeholder="Поиск по сайту">
             <button class="button" type="submit">Найти</button>
             </form>
           </li>
@@ -23,7 +24,7 @@
             <a class="navigation-link" href="#">Сравнить</a>
           </li>
           <li>
-            <button class="button button-basket" type="button">Корзина</button>
+            <button class="button button-basket">Корзина</button>
           </li>
         </ul>
         </nav>
@@ -53,10 +54,10 @@
             <a class="breadcrumbs-link" href="index.html">Главная</a>
           </li>
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link" href="">Каталог товаров</a>
+            <a class="breadcrumbs-link" href="#">Каталог товаров</a>
           </li>
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link">Моноподы для селфи</a>
+            <a class="breadcrumbs-link" href="#">Моноподы для селфи</a>
           </li>
         </ul>
       </header>
@@ -124,7 +125,7 @@
           <option value="cheap">Сначала дешёвое</option>
           <option value="expensive">Сначала дорогое</option>
         </select>
-        <a href="#" class="button-sort">
+        <a class="button-sort" href="#">
           <span class="visually-hidden">От меньшего к большему</span>
         </a>
         <a class="button-sort" href="#">
@@ -133,8 +134,8 @@
         <ul class="product-list">
           <li class="product-item">
             <article class="product-card">
-              <a class="product-card-link" href="">
-                <img class="product-card-image" src="" alt="">
+              <a class="product-card-link" href="#">
+                <img class="product-card-image" src="#" alt="Любительская селфи-палка">
                 <h3 class="product-card-title">Любительская селфи-палка</h3>
               </a>
               <span class="product-card-price">500 ₽</span>
@@ -142,8 +143,8 @@
           </li>
           <li class="product-item">
             <article class="product-card">
-              <a class="product-card-link" href="">
-                <img class="product-card-image" src="" alt="">
+              <a class="product-card-link" href="#">
+                <img class="product-card-image" src="#" alt="Профессиональная селфи-палка">
                 <h3 class="product-card-title">Профессиональная селфи-палка</h3>
               </a>
               <span class="product-card-price">1 500 ₽</span>
@@ -151,8 +152,8 @@
           </li>
           <li class="product-item">
             <article class="product-card">
-              <a class="product-card-link" href="">
-                <img class="product-card-image" src="" alt="">
+              <a class="product-card-link" href="#">
+                <img class="product-card-image" src="#" alt="Непотопляемая селфи-палка">
                 <h3 class="product-card-title">Непотопляемая селфи-палка</h3>
               </a>
               <span class="product-card-price">2 500 ₽</span>
@@ -160,8 +161,8 @@
           </li>
           <li class="product-item">
             <article class="product-card">
-              <a class="product-card-link" href="">
-                <img class="product-card-image" src="" alt="">
+              <a class="product-card-link" href="#">
+                <img class="product-card-image" src="#" alt="Селфи-палка «Следуй за мной»">
                 <h3 class="product-card-title">Селфи-палка «Следуй за мной»</h3>
               </a>
               <span class="product-card-price">1 500 ₽</span>
@@ -190,19 +191,18 @@
     <footer class="page-footer">
       <section class="footer-logo">
         <h2 class="visually-hidden">Логотип</h2>
-        <a href="" class="footer-logo-link">
-          <img src="" alt="Логотип интернет магазина Device" class="footer-logo-img"></a>
+        <a class="footer-logo-link" href="#" >
+          <img class="footer-logo-img" src="#" alt="Логотип интернет магазина Device"></a>
       </section>
       <section class="footer-contacts">
         <h2 class="visually-hidden">Контакты</h2>
         <address class="footer-address">
-          <p class="footer-address-text">Санкт-Петербург, набережная
-            реки Карповки, 5, литера П.</p>
+          <p class="footer-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
         </address>
         <ul class="footer-menu">
-          <li class="footer-menu-item"><a class="footer-menu-link" href="">Доставка</a></li>
-          <li class="footer-menu-item"><a class="footer-menu-link" href="">Гарантия</a></li>
-          <li class="footer-menu-item"><a class="footer-menu-link" href="">Контакты</a></li>
+          <li class="footer-menu-item"><a class="footer-menu-link" href="#">Доставка</a></li>
+          <li class="footer-menu-item"><a class="footer-menu-link" href="#">Гарантия</a></li>
+          <li class="footer-menu-item"><a class="footer-menu-link" href="#">Контакты</a></li>
         </ul>
         <address class="footer-phone">
           <p class="footer-phone-text">Тел.: +7 (812) 812-12-12</p>
@@ -228,8 +228,8 @@
             </a>
           </li>
         </ul>
-        <a href="" class="footer-social-link">
-          <img src="" alt="Логотип компании разработчика сайта - html academy" class="footer-social-img">
+        <a class="footer-social-link" href="#" >
+          <img class="footer-social-img" src="#" alt="Логотип компании разработчика сайта - html academy">
         </a>
       </section>
     </footer>
