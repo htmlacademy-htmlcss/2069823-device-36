@@ -22,19 +22,20 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "Rubik", sans-serif;
   font-size: 18px;
   line-height: 30px;
   color: #000000;
   background-color: #FFFFFF;
-
-}
-
-.page-header {
-  color: #000000;
-  background-color: #FFE17F;
-  font-style: normal;
 }
 
 .visually-hidden {
@@ -49,6 +50,34 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.page-header {
+  color: #000000;
+  background-color: #FFE17F;
+  font-style: normal;
+  width: 1160px;
+  margin: 0 auto;
+}
+
+
+.navigation-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  /* Просто для наглядности меню */
+  justify-content: space-between;
+  }
+
+  .navigation-user {
+    width: 1040px;
+    margin: 0 auto;
+  }
+
+  .navigation-main {
+    width: 1040px;
+    margin: 0 auto;
+
+  }
 
 .navigation-user .navigation-link {
   font-weight: 400;
@@ -66,6 +95,33 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.2em;
+}
+
+.main-container {
+  flex-grow: 1;
+}
+
+.popular {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.popular-list {
+ margin: 0;
+ padding: 0;
+}
+
+.popular-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gallery {
+  width: 560px;
+}
+
+.advantage {
+  width: 560px;
 }
 
 .advantage-title {
