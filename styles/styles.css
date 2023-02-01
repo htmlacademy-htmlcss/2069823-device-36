@@ -103,7 +103,7 @@ body {
 
 .popular {
   width: 1160px;
-  margin: 0 auto;
+  margin: 0 auto 70px;
 }
 
 .popular-list {
@@ -155,9 +155,20 @@ body {
   color: #444444;
 }
 
+.slider-pagination {
+  display: flex;
+ justify-content: center;
+}
+
+.product {
+  width: 1160px;
+  margin: 0 auto 70px;
+}
+
 .product-list {
   display: flex;
-  margin: 0;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .product-item {
@@ -189,6 +200,28 @@ body {
   margin-bottom: 0;
 }
 
+.service {
+  background-color: #F0F0F0;
+
+}
+
+.service-container {
+  width: 1160px;
+  margin: 0 auto 70px;
+  display: flex;
+}
+
+.service-wrapper {
+  width: 287px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.service-item {
+  width: 448px;
+}
+
 .service-button {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -209,7 +242,31 @@ body {
   color: #444444;
 }
 
+.service-img {
+  width: 136px;
+  height: 164px;
+  background-image: url(/images/delivery.png);
+  margin-left: auto;
+}
+
+.offer {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto 70px;
+  background-color: #F0F0F0;
+}
+
+.offer-img {
+  width: 125px;
+  height: 100px;
+  background-image: url(/images/car.svg);
+  background-repeat: no-repeat;
+  background-color: #FFE17F;
+  background-position: 50%;
+}
+
 .offer-title {
+  width: 910px;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 20px;
@@ -217,6 +274,25 @@ body {
   text-align: center;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+}
+
+.button-offer {
+  width: 125px;
+}
+
+.container {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto 70px;
+}
+
+.about {
+  width: 520px;
+}
+
+.contacts {
+  width: 532px;
+  margin-left: 108px;
 }
 
 .about-desc {
@@ -289,6 +365,13 @@ text-transform: uppercase;
 .subscribe {
   background-color: #F0F0F0;
 }
+
+.subscribe-container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+
 
 .subscribe-title {
   font-family: "Raleway", sans-serif;
