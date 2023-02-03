@@ -8,12 +8,13 @@
   <body>
     <header class="page-header">
       <a class="logo-link" href="https://htmlacademy.ru/">
-        <img class="logo" src="images/logo.svg" width="145" height="36" alt="Логотип интернет магазина Device"></a>
+        <img class="logo" src="images/logo.svg" width="145" height="36" alt="Логотип интернет магазина Device">
+      </a>
       <nav class="navigation navigation-user">
         <ul class="navigation-list">
           <li class="navigation-item">
             <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
-            <label for="search">Поиск</label>
+            <label class="visually-hidden" for="search">Поиск</label>
             <input type="search" id="search" placeholder="Поиск по сайту">
             <button class="button" type="submit">Найти</button>
             </form>
@@ -29,7 +30,7 @@
           </li>
         </ul>
         </nav>
-        <nav class="navigation navigation-main">
+      <nav class="navigation navigation-main">
         <ul class="navigation-list">
           <li class="navigation-item">
             <a class="navigation-link" href="#">Каталог товаров</a>
@@ -47,7 +48,7 @@
         </ul>
       </nav>
     </header>
-    <main class="main-index">
+    <main class="main-index main-container">
       <h1 class="visually-hidden">Магазин гаджетов Device</h1>
       <section class="popular">
         <h2 class="visually-hidden">Популярные товары</h2>
@@ -64,7 +65,7 @@
               </button>
             </section>
             <section class="advantage">
-              <h2 class="advantage-title">Порхает как бабочка,жалит как пчела!</h2>
+              <h2 class="advantage-title">Порхает как бабочка, жалит как пчела!</h2>
               <p class="advantage-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
               </p>
               <a class="advantage-link" href="#">Подробнее</a>
@@ -176,117 +177,121 @@
         </ul>
       </section>
       <section class="service">
-        <h2 class="visually-hidden">Услуги</h2>
-        <button class="service-button" type="button">Доставка</button>
-        <button class="service-button" type="button">Гарантия</button>
-        <button class="service-button" type="button">Кредит</button>
-        <div class="service-item service-active">
-          <h3 class="service-title">Доставка</h3>
-          <p class="service-desc">Мы с удовольствием доставим ваш товар прямо
-            к вашему подъезду совершенно бесплатно! Ведь
-            мы неплохо заработаем, поднимая его на ваш этаж.</p>
-        </div>
-        <div class="service-item service-hide">
-          <h3 class="service-title">Гарантия</h3>
-          <p class="service-desc"></p>
-        </div>
-        <div class="service-item service-hide">
-          <h3 class="service-title">Кредит</h3>
-          <p class="service-desc"></p>
+        <div class="service-container">
+          <h2 class="visually-hidden">Услуги</h2>
+          <div class="service-wrapper">
+            <button class="service-button" type="button">Доставка</button>
+            <button class="service-button" type="button">Гарантия</button>
+            <button class="service-button" type="button">Кредит</button>
+          </div>
+          <div class="service-item service-active">
+            <h3 class="service-title">Доставка</h3>
+            <p class="service-desc">Мы с удовольствием доставим ваш товар прямо
+              к вашему подъезду совершенно бесплатно! Ведь
+              мы неплохо заработаем, поднимая его на ваш этаж.</p>
+          </div>
+          <div class="service-img"></div>
         </div>
       </section>
       <section class="offer">
+        <div class="offer-img"></div>
         <h2 class="offer-title">Доставим редкий товар под заказ</h2>
         <button class="button-offer" type="button">i</button>
       </section>
-      <section class="about">
-        <h2 class="about-desc">О нас</h2>
-        <p class="about-text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-        <p class="about-text">Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:</p>
-        <ul class="about-item">
-          <li class="about-title">
-            <p class="about-subtitle">Меловые линии</p>
-          </li>
-          <li class="about-title">
-            <p class="about-subtitle">СДИК</p>
-          </li>
-          <li class="about-title">
-            <p class="about-subtitle">ТоксБерри</p>
-          </li>
-        </ul>
-        <button class="button-about" type="button">Подробнее о нас</button>
-      </section>
-      <section class="contacts">
-        <h2 class="contacts-title">Контакты</h2>
-        <p class="contacts-text">Вы можете забрать товар сами, заехав в наш офис. Заодно сможете проверить работоспособность покупки.</p>
-        <h3 class="contacts-subtitle">Интернет-магазин «Девайс»</h3>
-        <address class="contacts-address">
-          <p class="contacts-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
-          <a class="contacts-phone" href="#">+7 (812) 812-12-12</a>
-        </address>
-        <h3 class="contacts-subtitle">Время работы</h3>
-        <ul class="contacts-schedule">
-          <li class="contacts-schedule-item">пн—пт: с 10:00 до 22:00</li>
-          <li class="contacts-schedule-item">сб—вс: с 10:00 до 19:00</li>
-        </ul>
-        <button class="button-contacts" type="button">Напишите нам</button>
-      </section>
+      <div class="container">
+        <section class="about">
+          <h2 class="about-desc">О нас</h2>
+          <p class="about-text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+          <p class="about-text">Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:</p>
+          <ul class="about-item">
+            <li class="about-title">
+              <p class="about-subtitle">Меловые линии</p>
+            </li>
+            <li class="about-title">
+              <p class="about-subtitle">СДИК</p>
+            </li>
+            <li class="about-title">
+              <p class="about-subtitle">ТоксБерри</p>
+            </li>
+          </ul>
+          <button class="button-about" type="button">Подробнее о нас</button>
+        </section>
+        <section class="contacts">
+          <h2 class="contacts-title">Контакты</h2>
+          <p class="contacts-text">Вы можете забрать товар сами, заехав в наш офис. Заодно сможете проверить работоспособность покупки.</p>
+          <h3 class="contacts-subtitle">Интернет-магазин «Девайс»</h3>
+          <address class="contacts-address">
+            <p class="contacts-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+            <a class="contacts-phone" href="#">+7 (812) 812-12-12</a>
+          </address>
+          <h3 class="contacts-subtitle">Время работы</h3>
+          <ul class="contacts-schedule">
+            <li class="contacts-schedule-item">пн—пт: с 10:00 до 22:00</li>
+            <li class="contacts-schedule-item">сб—вс: с 10:00 до 19:00</li>
+          </ul>
+          <button class="button-contacts" type="button">Напишите нам</button>
+        </section>
+      </div>
       <section class="subscribe">
-        <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
-        <p class="subscribe-text">Еженедельный дайджест с обзорами новинок,
-          длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
+        <div class="subscribe-container">
+          <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
+          <p class="subscribe-text">Еженедельный дайджест с обзорами новинок,
+            длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-            <label for="subscribe-email">Подписаться</label>
+            <label class="visually-hidden" for="subscribe-email">Подписаться</label>
             <input class="field" placeholder="Ваш e-mail" type="email" name="subscribe-email" id="subscribe-email" required>
             <button class="button-subscribe" type="submit">Подписаться</button>
           </form>
-        <p class="subscribe-text">Это бесплатно</p>
+          <p class="subscribe-text">Это бесплатно</p>
+        </div>
       </section>
     </main>
     <footer class="page-footer">
-      <section class="footer-logo">
-        <h2 class="visually-hidden">Логотип</h2>
-        <a class="footer-logo-link" href="#" >
-          <img class="footer-logo-img" src="images/logo-footer.svg" width="145"height="36" alt="Логотип интернет магазина Device"></a>
-      </section>
-      <section class="footer-contacts">
-        <h2 class="visually-hidden">Контакты</h2>
-        <address class="footer-address">
-          <p class="footer-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
-        </address>
-        <ul class="footer-menu">
-          <li class="footer-menu-item"><a class="footer-menu-link" href="#">Доставка</a></li>
-          <li class="footer-menu-item"><a class="footer-menu-link" href="#">Гарантия</a></li>
-          <li class="footer-menu-item"><a class="footer-menu-link" href="#">Контакты</a></li>
-        </ul>
-        <address class="footer-phone">
-          <p class="footer-phone-text">Тел.: +7 (812) 812-12-12</p>
-        </address>
-      </section>
-      <section class="footer-social">
-        <h2 class="visually-hidden">Ссылки на социальные сети</h2>
-        <div class="footer-item"></div>
-        <ul class="footer-social-list">
-          <li class="footer-social-item">
-            <a class="button-social" href="#">
-              <span class="visually-hidden">Телеграм</span>
-            </a>
-          </li>
-          <li class="footer-social-item">
-            <a class="button-social" href="#">
-              <span class="visually-hidden">Инстаграм</span>
-            </a>
-          </li>
-          <li class="footer-social-item">
-            <a class="button-social" href="#">
-              <span class="visually-hidden">Твиттер</span>
-            </a>
-          </li>
-        </ul>
-        <a class="footer-social-link" href="#" >
-          <img class="footer-social-img" src="images/logo-footer.svg" width="115" height="33" alt="Логотип компании разработчика сайта - html academy">
-        </a>
-      </section>
+      <div class="footer_container">
+        <section class="footer-logo">
+          <h2 class="visually-hidden">Логотип</h2>
+          <a class="footer-logo-link" href="#" >
+            <img class="footer-logo-img" src="images/logo-footer.svg" width="145" height="36" alt="Логотип интернет магазина Device"></a>
+        </section>
+        <section class="footer-contacts">
+          <h2 class="visually-hidden">Контакты</h2>
+          <address class="footer-address">
+            <p class="footer-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+          </address>
+          <ul class="footer-menu">
+            <li class="footer-menu-item"><a class="footer-menu-link" href="#">Доставка</a></li>
+            <li class="footer-menu-item"><a class="footer-menu-link" href="#">Гарантия</a></li>
+            <li class="footer-menu-item"><a class="footer-menu-link" href="#">Контакты</a></li>
+          </ul>
+          <address class="footer-phone">
+            <p class="footer-phone-text">Тел.: +7 (812) 812-12-12</p>
+          </address>
+        </section>
+        <section class="footer-social">
+          <h2 class="visually-hidden">Ссылки на социальные сети</h2>
+          <div class="footer-item"></div>
+          <ul class="footer-social-list">
+            <li class="footer-social-item">
+              <a class="button-social" href="#">
+                <span class="visually-hidden">Телеграм</span>
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a class="button-social" href="#">
+                <span class="visually-hidden">Инстаграм</span>
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a class="button-social" href="#">
+                <span class="visually-hidden">Твиттер</span>
+              </a>
+            </li>
+          </ul>
+          <a class="footer-social-link" href="#" >
+            <img class="footer-social-img" src="images/logo-academy.svg" width="115" height="33" alt="Логотип компании разработчика сайта - html academy">
+          </a>
+        </section>
+      </div>
     </footer>
   </body>
 </html>

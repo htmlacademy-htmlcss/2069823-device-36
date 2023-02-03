@@ -22,19 +22,20 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "Rubik", sans-serif;
   font-size: 18px;
   line-height: 30px;
   color: #000000;
   background-color: #FFFFFF;
-
-}
-
-.page-header {
-  color: #000000;
-  background-color: #FFE17F;
-  font-style: normal;
 }
 
 .visually-hidden {
@@ -48,6 +49,32 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.page-header {
+  color: #000000;
+  background-color: #FFE17F;
+  font-style: normal;
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.navigation-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  /* Просто для наглядности меню */
+  justify-content: space-between;
+}
+
+.navigation-user {
+  width: 1040px;
+  margin: 0 auto;
+}
+
+.navigation-main {
+  width: 1040px;
+  margin: 0 auto;
 }
 
 .navigation-user .navigation-link {
@@ -66,6 +93,33 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.2em;
+}
+
+.main-container {
+  flex-grow: 1;
+}
+
+.popular {
+  width: 1160px;
+  margin: 0 auto 70px;
+}
+
+.popular-list {
+ margin: 0;
+ padding: 0;
+}
+
+.popular-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gallery {
+  width: 560px;
+}
+
+.advantage {
+  width: 560px;
 }
 
 .advantage-title {
@@ -99,9 +153,20 @@ body {
   color: #444444;
 }
 
+.slider-pagination {
+  display: flex;
+ justify-content: center;
+}
+
+.product {
+  width: 1160px;
+  margin: 0 auto 70px;
+}
+
 .product-list {
   display: flex;
-  margin: 0;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .product-item {
@@ -133,6 +198,27 @@ body {
   margin-bottom: 0;
 }
 
+.service {
+  background-color: #F0F0F0;
+}
+
+.service-container {
+  width: 1160px;
+  margin: 0 auto 70px;
+  display: flex;
+}
+
+.service-wrapper {
+  width: 287px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.service-item {
+  width: 448px;
+}
+
 .service-button {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -153,7 +239,31 @@ body {
   color: #444444;
 }
 
+.service-img {
+  width: 136px;
+  height: 164px;
+  background-image: url(/images/delivery.png);
+  margin-left: auto;
+}
+
+.offer {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto 70px;
+  background-color: #F0F0F0;
+}
+
+.offer-img {
+  width: 125px;
+  height: 100px;
+  background-image: url(/images/car.svg);
+  background-repeat: no-repeat;
+  background-color: #FFE17F;
+  background-position: 50%;
+}
+
 .offer-title {
+  width: 910px;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 20px;
@@ -161,6 +271,25 @@ body {
   text-align: center;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+}
+
+.button-offer {
+  width: 125px;
+}
+
+.container {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto 70px;
+}
+
+.about {
+  width: 520px;
+}
+
+.contacts {
+  width: 532px;
+  margin-left: 108px;
 }
 
 .about-desc {
@@ -228,13 +357,23 @@ text-transform: uppercase;
   text-align: center;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  }
+}
 
 .subscribe {
   background-color: #F0F0F0;
 }
 
+.subscribe-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1160px;
+  margin: 0 auto;
+}
+
 .subscribe-title {
+  width: 348px;
+  margin:64px 252px 144px 0;
+  padding: 0;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 50px;
@@ -242,8 +381,9 @@ text-transform: uppercase;
 }
 
 .subscribe-text {
+  width: 560px;
   color: #444444;
-  margin: 0;
+  margin: 74px 0 0 0;
 }
 
 .field {
@@ -263,11 +403,38 @@ text-transform: uppercase;
   background-color: #444444;
 }
 
+.footer_container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  margin: 62px 1154px 35px 0;
+}
+
+.footer-contacts {
+  display: flex;
+}
+
+.footer-address {
+  width: 234px;
+  margin: 0 124px 64px 0;
+  padding: 0;
+}
+
 .footer-address-text {
   font-size: 16px;
   line-height: 20px;
   color: #FFFFFF;
   font-style: normal;
+}
+
+.footer-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 444px;
+  margin: 0 154px 62px 0;
+  padding: 0;
 }
 
 .footer-menu-link {
@@ -281,6 +448,12 @@ text-transform: uppercase;
   text-decoration: none;
 }
 
+.footer-phone {
+  width: 175px;
+  margin-left: auto;
+  padding: 0;
+}
+
 .footer-phone-text {
   font-size: 16px;
   line-height: 20px;
@@ -288,6 +461,18 @@ text-transform: uppercase;
   font-style: normal;
   text-decoration-line: underline;
 }
+
+.footer-social {
+  display: flex;
+}
+
+.footer-social-list {
+  display: flex;
+  width: 150px;
+  margin: 0 auto;
+}
+
+/* Catalog */
 
 .inner-header-title {
   font-family: "Raleway", sans-serif;
@@ -303,8 +488,19 @@ text-transform: uppercase;
   text-decoration: none;
 }
 
+.inner-container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.catalog-container {
+  background-color: #F0F0F0;
+}
+
 .catalog {
-  background-color: #EBEBEB;
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
 }
 
 .catalog-title {
@@ -314,6 +510,10 @@ text-transform: uppercase;
   line-height: 19px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+}
+
+.catalog-filter {
+  width: 320px;
 }
 
 .catalog-filter-title {
@@ -335,6 +535,10 @@ text-transform: uppercase;
   text-transform: uppercase;
 }
 
+.catolog-right-column {
+  width: 840px;
+}
+
 .sort-title {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -351,13 +555,30 @@ text-transform: uppercase;
   line-height: 30px;
 }
 
+.product-card-list {
+  width: 760px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 70px 40px 0 40px;
+  padding: 0;
+  background-color: #fff;
+}
+
+.product-card-item {
+  list-style-type: none;
+  background-color: #fff;
+  margin-bottom: 44px;
+}
+
+.product-card-item:nth-child(2n+1) {
+  margin-right: 40px;
+}
 
 .product-card-title {
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
   letter-spacing: -0.02em;
-
 }
 
 .product-card-link {
@@ -372,6 +593,7 @@ text-transform: uppercase;
 }
 
 .button-product {
+  width: 760px;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 16px;
