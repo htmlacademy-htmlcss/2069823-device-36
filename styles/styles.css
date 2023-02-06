@@ -162,7 +162,7 @@ body {
   line-height: 30px;
   padding-top: 30px;
   color: #FFFFFF;
-  margin: 0 49px 0 900px;`
+  margin: 0 49px 0 900px;
 }
 
 .popular-list {
@@ -283,10 +283,6 @@ body {
   margin-bottom: 0;
 }
 
-.service {
-  background-color: #F0F0F0;
-}
-
 .service-container {
   display: flex;
   width: 1160px;
@@ -294,15 +290,15 @@ body {
   margin: 0 auto 70px;
 }
 
+.service {
+  background-color: #F0F0F0;;
+}
+
 .service-wrapper {
   width: 287px;
   display: flex;
   flex-direction: column;
   margin: 0;
-}
-
-.service-item {
-
 }
 
 .service-button {
@@ -314,8 +310,23 @@ body {
   letter-spacing: 0.2em;
 }
 
+.service-button:not(:last-child) {
+  margin-bottom: 35px;
+}
+
+.service-button:first-child {
+  margin-top: 64px;
+}
+
+.service-item {
+  width: 448px;
+  margin-top: 73px;
+  margin-left: 116px;
+}
+
 .service-title {
-  margin: 73px 0 34px 116px;
+  margin: 0;
+  margin-bottom: 34px;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 50px;
@@ -323,9 +334,7 @@ body {
 }
 
 .service-desc {
-  width: 448px;
   margin: 0;
-  margin-left: 116px;
   font-weight: 400;
   color: #444444;
 }
@@ -334,11 +343,12 @@ body {
   width: 136px;
   height: 164px;
   background-image: url(/images/delivery.png);
-  margin-left: auto;
+  margin: 78px 0 0 110px;
 }
 
 .offer {
   display: flex;
+  align-items: center;
   width: 1160px;
   margin: 0 auto 70px;
   background-color: #F0F0F0;
@@ -365,7 +375,13 @@ body {
 }
 
 .button-offer {
-  width: 125px;
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: 43px;
+  border-radius: 50%;
+  border: 0;
+  background-color: rgba(220, 220, 220, 0.5);;
 }
 
 .container {
@@ -384,6 +400,7 @@ body {
 }
 
 .about-desc {
+  margin: 48px auto;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 50px;
@@ -392,6 +409,16 @@ body {
 
 .about-text{
   color: #444444;
+  margin-bottom: 30px;
+}
+
+.about-title {
+  margin: 0;
+  list-style-type: none;
+}
+
+.about-title:not(:last-child) {
+  margin-bottom: 19px;
 }
 
 .about-subtitle {
@@ -401,15 +428,17 @@ body {
 }
 
 .button-about {
-font-family: "Raleway", sans-serif;
-font-weight: 800;
-line-height: 21px;
-text-align: center;
-letter-spacing: 0.2em;
-text-transform: uppercase;
+  margin-top: 30px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
 
 .contacts-title {
+  margin: 48px auto;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 50px;
@@ -418,27 +447,32 @@ text-transform: uppercase;
 
 .contacts-text {
   color: #444444;
+  margin-bottom: 30px;
 }
 
 .contacts-subtitle {
   font-weight: 700;
   font-size: 24px;
   color: #444444;
+  margin-bottom: 15px;
 }
 
 .contacts-address-text {
   font-style: normal;
   color: #444444;
+  margin-bottom: 0;
 }
 
 .contacts-phone {
   text-decoration: none;
   color: #444444;
   font-style: normal;
+  margin-bottom: 30px;
 }
 
 .contacts-schedule-item {
   color: #444444;
+  margin-bottom: 30px;
 }
 
 .button-contacts {
