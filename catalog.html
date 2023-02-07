@@ -7,46 +7,48 @@
   </head>
   <body>
     <header class="page-header">
-      <a class="logo-link" href="https://htmlacademy.ru/">
-        <img class="logo" src="images/logo.svg" width="145" height="36" alt="Логотип интернет магазина Device">
-      </a>
-      <nav class="navigation navigation-user">
-        <ul class="navigation-list">
-          <li class="navigation-item">
-            <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
-            <label class="visually-hidden" for="search">Поиск</label>
-            <input type="search" id="search" placeholder="Поиск по сайту">
-            <button class="button" type="submit">Найти</button>
-            </form>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Войти</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Сравнить</a>
-          </li>
-          <li>
-            <button class="button button-basket">Корзина</button>
-          </li>
-        </ul>
+      <div class="page-wrapper">
+        <a class="logo-link" href="https://htmlacademy.ru/">
+          <img class="logo" src="images/logo.svg" width="145" height="36" alt="Логотип интернет магазина Device">
+        </a>
+        <nav class="navigation navigation-user">
+          <ul class="navigation-list">
+            <li class="navigation-item">
+              <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+              <label class="visually-hidden" for="search">Поиск</label>
+              <input class="navigation-input" type="search" id="search" placeholder="Поиск по сайту">
+              <button class="navigation-button-user" type="submit">Найти</button>
+              </form>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">Войти</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">Сравнить</a>
+            </li>
+            <li>
+              <button class="button button-basket">Корзина</button>
+            </li>
+          </ul>
         </nav>
-      <nav class="navigation navigation-main">
-        <ul class="navigation-list">
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Каталог товаров</a>
-            <button class="button" type="button">Раскрыть список</button>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Доставка</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Гарантия</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Контакты</a>
-          </li>
-        </ul>
-      </nav>
+        <nav class="navigation navigation-main">
+          <ul class="navigation-list">
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">Каталог товаров</a>
+              <button class="navigation-button-main" type="button"></button>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">Доставка</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">Гарантия</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main class="main-inner main-container">
       <div class="inner-container">
@@ -67,7 +69,8 @@
       </div>
       <div class="catalog-container">
         <section class="catalog">
-            <h2 class="catalog-title visually-hidden">Фильтр:</h2>
+          <div class="catalog-filter-wrapper">
+            <h2 class="catalog-title">Фильтр:</h2>
             <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
               <fieldset class="catalog-filter-group">
                 <legend class="catalog-filter-title">Цвет</legend>
@@ -124,20 +127,25 @@
               </fieldset>
               <button class="filter-button" type="submit">Показать</button>
             </form>
-          <div class="catolog-right-column">
-            <h2 class="sort-title">Сортировка:</h2>
+          </div>
+          <dv class="catolog-right-column">
+            <div class="sort-wrapper">
+              <h2 class="sort-title">Сортировка:</h2>
               <select class="select-control" aria-label="Сортировка">
-                <option value="popular">Популярные</option>
-                <option value="cheap">Сначала дешёвое</option>
-                <option value="expensive">Сначала дорогое</option>
+                  <option value="popular">Популярные</option>
+                  <option value="cheap">Сначала дешёвое</option>
+                  <option value="expensive">Сначала дорогое</option>
               </select>
-              <a class="button-sort" href="#">
-                <span class="visually-hidden">От меньшего к большему</span>
-              </a>
-              <a class="button-sort" href="#">
-                <span class="visually-hidden">От большего к меньшему</span>
-              </a>
-              <ul class="product-card-list">
+              <div class="button-sort-wrapper">
+                <button class="button-sort" type="button">
+                  <span class="visually-hidden">От меньшего к большему</span>
+                </button>
+                <button class="button-sort" type="button">
+                  <span class="visually-hidden">От большего к меньшему</span>
+                </button>
+              </div>
+            </div>
+            <ul class="product-card-list">
                 <li class="product-card-item">
                   <article class="product-card">
                     <a class="product-card-link" href="#">
@@ -174,28 +182,30 @@
                     <span class="product-card-price">1 500 ₽</span>
                 </article>
                 </li>
-              </ul>
-              <button class="button-product" type="button">Загрузить еще</button>
+            </ul>
+            <button class="button-product" type="button">Загрузить еще</button>
+            <div class="pagination-wrapper">
               <button class="button-pagination" type="button">Назад</button>
               <ul class="pagination">
-                <li class="pagination-item">
-                  <a class="pagination-link">1</a>
-                </li>
-                <li class="pagination-item">
-                  <a class="pagination-link" href="#">2</a>
-                </li>
-                <li class="pagination-item">
-                  <a class="pagination-link" href="#">3</a>
-                </li>
-                <li class="pagination-item">
-                  <a class="pagination-link" href="#">...</a>
-                </li>
-                <li class="pagination-item">
-                  <a class="pagination-link" href="#">15</a>
-                </li>
+                  <li class="pagination-item">
+                    <a class="pagination-link">1</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="pagination-link" href="#">2</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="pagination-link" href="#">3</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="pagination-link" href="#">...</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="pagination-link" href="#">15</a>
+                  </li>
               </ul>
               <button class="button-pagination" type="button">Вперед</button>
-          </div>
+            </div>
+          </dv>
         </section>
       </div>
     </main>
