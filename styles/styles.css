@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 800;
   src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
@@ -7,7 +7,7 @@
 }
 
 @font-face {
-  font-family: "Rubik";
+  font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
@@ -15,7 +15,7 @@
 }
 
 @font-face {
-  font-family: "Rubik";
+  font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 700;
   src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
@@ -89,6 +89,45 @@ body {
 .navigation-item {
   display: flex;
   list-style-type: none;
+  align-items: center;
+}
+
+.navigation-icon-login {
+  width: 22px;
+  height: 30px;
+  background-image: url(/images/login.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.navigation-icon-compare {
+  width: 22px;
+  height: 30px;
+  background-image: url(/images/compare.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.navigation-icon-basket {
+  width: 22px;
+  height: 30px;
+  background-image: url(/images/basket.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.navigation-item-block-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 241px;
+  margin-left: 176px;
+}
+
+.navigation-item-block-2 {
+  display: flex;
+  justify-content: space-between;
+  min-width: 471px;
 }
 
 .navigation-input {
@@ -223,6 +262,10 @@ body {
   color: #444444;
 }
 
+.table-value {
+  padding: 0 20px 12px 0;
+}
+
 .slider-control {
   position: relative;
   bottom: 175px;
@@ -268,7 +311,6 @@ body {
   background-color: #FFE17F;
 }
 
-
 .product-desc {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -277,15 +319,15 @@ body {
   margin-bottom: 0;
 }
 
+.service {
+  background: linear-gradient(to bottom, #FFFFFF 35%, #F0F0F0 35%);
+}
+
 .service-container {
   display: flex;
   width: 1160px;
   min-height: 290px;
   margin: 0 auto 70px;
-}
-
-.service {
-  background-color: #F0F0F0;;
 }
 
 .service-wrapper {
@@ -643,8 +685,7 @@ body {
 .breadcrumbs {
   display: flex;
   padding: 0;
-  margin: 0;
-  margin-top: 16px;
+  margin: 16px 0 0 0;
 }
 
 .breadcrumbs-item {
