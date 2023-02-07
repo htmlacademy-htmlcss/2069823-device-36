@@ -7,7 +7,7 @@
 }
 
 @font-face {
-  font-family: "Rubik", sans-serif;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
@@ -15,7 +15,7 @@
 }
 
 @font-face {
-  font-family: "Rubik", sans-serif;;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 700;
   src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
@@ -83,7 +83,6 @@ body {
   margin: 0;
   padding: 0;
   align-items: center;
-  /* Просто для наглядности меню */
   justify-content: space-between;
 }
 
@@ -111,7 +110,6 @@ body {
   border: none;
   background-color: rgba(28,28,28,0);
 }
-
 
 .navigation-link {
   display: block;
@@ -242,6 +240,7 @@ body {
 
 .product-list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0 auto;
   padding: 0;
 }
@@ -520,7 +519,7 @@ body {
   width: 557px;
   height: 55px;
   padding: 0;
-  border: 1;
+  border: 1px solid;
   color: #444444;
   background-color: #F0F0F0;
 }
@@ -792,16 +791,23 @@ body {
   text-align: center;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  background-color: #FFFFFF
+  background-color: #FFFFFF;
+  border: 3px solid #E5E5E5;
 }
 
 .pagination-wrapper {
   margin: 44px 40px 78px 40px;
   display: flex;
   justify-content: space-between;
+  background-color: #EBEBEB;
+}
+
+.pagination {
+  display: flex;
 }
 
 .button-pagination {
+  min-width: 140px;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -809,9 +815,14 @@ body {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #444444;
+  background-color: #EBEBEB;
+  border: 0;
+  align-items: center;
 }
 
 .pagination-item {
+  width: 40px;
+  height: 40px;
   list-style-type: none;
 }
 
