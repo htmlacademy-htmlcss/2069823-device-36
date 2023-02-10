@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway";
   font-style: normal;
   font-weight: 800;
   src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
@@ -7,7 +7,7 @@
 }
 
 @font-face {
-  font-family: "Rubik", sans-serif;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
@@ -15,7 +15,7 @@
 }
 
 @font-face {
-  font-family: "Rubik", sans-serif;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 700;
   src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
@@ -67,7 +67,6 @@ body {
 }
 
 .logo-link {
-  margin-bottom: 30px;
   position: relative;
   bottom: 20px;
 }
@@ -130,28 +129,41 @@ body {
   min-width: 471px;
 }
 
+.search-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  min-height: 40px;
+}
+
 .navigation-input {
   margin: 0;
   padding: 0;
   width: 360px;
+  border: 2px solid #000000;
+  border-radius: 50px 0 0 50px;
+  align-items: stretch;
 }
 
 .navigation-button-user {
   margin: 0;
   padding: 0;
   width: 160px;
+  border: 2px solid #000000;
+  border-left: 1px solid #000000;
+  border-radius: 0 50px 50px 0;
 }
 
 .navigation-button-main {
   width: 50px;
   height: 50px;
+  margin-left: 17px;
   background-image: url(/images/button-plus.svg);
   border: none;
   background-color: rgba(28,28,28,0);
 }
 
 .navigation-link {
-  display: block;
+  display: inline-block;
   color: inherit;
   text-align: center;
   text-decoration: none;
@@ -177,7 +189,7 @@ body {
 .popular {
   width: 1160px;
   height: 560px;
-  margin: 0 auto 70px;
+  margin: 0 auto 55px;
 }
 
 .popular-title {
@@ -241,6 +253,7 @@ body {
 .advantage-link {
   display: block;
   margin-bottom: 50px;
+  min-height: 40px;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   line-height: 21px;
@@ -251,29 +264,36 @@ body {
 
 }
 
-.table-row-1 {
-  font-size: 36px;
-  margin-bottom: 12px;
-  margin-right: 60px;
+.advantage-table {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  column-gap: 20px;
+  row-gap: 12px;
 }
 
-.table-row-2 {
+.advantage-table-value-1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+.advantage-table-value-2 {
   font-size: 16px;
   color: #444444;
-}
-
-.table-value {
-  padding: 0 20px 12px 0;
+  margin: 0;
 }
 
 .slider-control {
   position: relative;
-  bottom: 175px;
+  bottom: 195px;
 }
 
 .slider-pagination {
   display: flex;
   justify-content: center;
+}
+
+.slider-pagination-item {
+  list-style: none;
 }
 
 .product {
@@ -326,7 +346,7 @@ body {
 .service-container {
   display: flex;
   width: 1160px;
-  min-height: 290px;
+  min-height: 391px;
   margin: 0 auto 70px;
 }
 
@@ -509,15 +529,17 @@ body {
 
 .contacts-schedule {
   padding: 0;
+  margin: 0;
+  margin-bottom: 40px;
 }
 
 .contacts-schedule-item {
   color: #444444;
-  margin-bottom: 30px;
   list-style-type: none;
 }
 
 .button-contacts {
+  padding: 0;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   line-height: 21px;
@@ -557,13 +579,21 @@ body {
   margin: 14px 0 70px auto;
 }
 
+.subscribe-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 .field {
   width: 557px;
-  height: 55px;
+  height: 54px;
   padding: 0;
-  border: 1px solid;
-  color: #444444;
+  border: none;
+  border-bottom: 3px solid #C4C4C4;
   background-color: #F0F0F0;
+  font-family: "Rubik";
+  font-size: 18px;
+  line-height: 30px;
 }
 
 .button-subscribe {
@@ -571,11 +601,13 @@ body {
   height: 57px;
   padding: 0;
   font-family: "Raleway", sans-serif;
+  font-size: 18px;
   font-weight: 800;
   line-height: 21px;
   text-align: center;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  border: 3px solid #C4C4C4;
 }
 
 .page-footer {
@@ -588,11 +620,12 @@ body {
 }
 
 .footer-logo {
-  margin: 62px 1154px 35px 0;
+  margin: 62px 0 30px 0;
 }
 
 .footer-contacts {
   display: flex;
+  height: 80px;
 }
 
 .footer-address {
@@ -604,6 +637,8 @@ body {
 .footer-address-text {
   font-size: 16px;
   line-height: 20px;
+  width: 240px;
+  margin: 0;
   color: #FFFFFF;
   font-style: normal;
 }
@@ -641,6 +676,7 @@ body {
 .footer-phone-text {
   font-size: 16px;
   line-height: 20px;
+  margin: 0;
   color: #FFFFFF;
   font-style: normal;
   text-decoration-line: underline;
