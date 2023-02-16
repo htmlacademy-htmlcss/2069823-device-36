@@ -71,6 +71,18 @@ body {
   bottom: 20px;
 }
 
+.logo-link:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.logo-svg:hover {
+  opacity: 0.6;
+}
+
+.logo-svg:active {
+  opacity: 0.3;
+}
+
 .navigation-user  {
   font-weight: 400;
   margin-bottom: 30px;
@@ -138,10 +150,21 @@ body {
 .navigation-input {
   margin: 0;
   padding: 0;
-  width: 360px;
+  width: 359px;
   border: 2px solid #000000;
   border-radius: 50px 0 0 50px;
   align-items: stretch;
+  font-size: 16px;
+  line-height: 20px;
+  padding-left: 48px;
+  background-image: url("/images/search.svg");
+  background-repeat: no-repeat;
+  background-position: 4% 50%;
+  background-color: #FFE17F;
+}
+
+.navigation-input:focus {
+  outline: 2px solid #AF4FFF;
 }
 
 .navigation-button-user {
@@ -151,7 +174,15 @@ body {
   border: 2px solid #000000;
   border-left: 1px solid #000000;
   border-radius: 0 50px 50px 0;
+  background-color: #FFE17F;
+  font-size: 16px;
+  line-height: 20px;
 }
+
+.navigation-button-user:focus {
+  outline: 2px solid #AF4FFF;
+}
+
 
 .navigation-button-main {
   width: 50px;
