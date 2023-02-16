@@ -93,41 +93,60 @@ body {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  align-items: center;
   justify-content: space-between;
 }
 
 .navigation-item {
+  position: relative;
   display: flex;
   list-style-type: none;
   align-items: center;
 }
 
-.navigation-icon-login {
-  width: 22px;
-  height: 30px;
+.navigation-link-login {
+  margin-left: 50px;
+}
+
+.navigation-link-login:before {
+  content: "";
+  width: 15px;
+  height: 12px;
+  position: absolute;
+  top: 15px;
+  left: 25px;
   background-image: url(/images/login.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
-.navigation-icon-compare {
-  width: 22px;
-  height: 30px;
+
+.navigation-link-compare {
+  margin-left: 25px;
+}
+
+.navigation-link-compare::before {
+  content: "";
+  width: 10px;
+  height: 12px;
+  position: absolute;
+  top: 15px;
+  left: 2px;
   background-image: url(/images/compare.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
-.navigation-icon-basket {
-  width: 22px;
-  height: 30px;
-  background-image: url(/images/basket.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
+.navigation-user .navigation-link:hover {
+  opacity: 0.6;
+}
+
+.navigation-user .navigation-link:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.navigation-user .navigation-link:active {
+  opacity: 0.3;
+  outline: none;
 }
 
 .navigation-item-block-1 {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -179,6 +198,21 @@ body {
   line-height: 20px;
 }
 
+.navigation-button-user span {
+  padding: 10px 50px;
+}
+
+.navigation-button-user:hover {
+  color: #FFFFFF;
+  background-color: #000000;
+}
+
+.navigation-button-user span:active {
+  color: #FFFFFF;
+  background-color: #000000;
+  opacity: 0.3;
+}
+
 .navigation-button-user:focus {
   outline: 2px solid #AF4FFF;
 }
@@ -194,10 +228,9 @@ body {
 }
 
 .navigation-link {
-  display: inline-block;
   color: inherit;
-  text-align: center;
   text-decoration: none;
+  margin-top: 1px;
 }
 
 .navigation-user .navigation-link {
