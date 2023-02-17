@@ -35,7 +35,7 @@ body {
   font-size: 18px;
   line-height: 30px;
   color: #000000;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .visually-hidden {
@@ -50,6 +50,8 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+/* HEADER */
 
 .page-header {
   width: 1160px;
@@ -92,10 +94,11 @@ body {
   color: inherit;
   text-decoration: none;
   list-style: none;
+  padding: 5px 0;
 }
 
 .navigation-user  {
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 
 .navigation-list-user {
@@ -122,6 +125,7 @@ body {
   align-items: stretch;
   font-size: 16px;
   line-height: 20px;
+  letter-spacing: 0.5px;
   padding-left: 48px;
   background-image: url("/images/search.svg");
   background-repeat: no-repeat;
@@ -250,9 +254,30 @@ body {
   letter-spacing: 0.2em;
 }
 
+.navigation-main .navigation-link:hover {
+  opacity: 0.6;
+}
+
+.navigation-main .navigation-link:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.navigation-main .navigation-link:active {
+  opacity: 0.3;
+  outline: none;
+}
+
+.navigation-button-main:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+/* MAIN */
+
 .main-container {
   flex-grow: 1;
 }
+
+/* SECTION POPULAR */
 
 .popular {
   width: 1160px;
@@ -264,7 +289,7 @@ body {
   display: flex;
   align-items: center;
   width: 1160px;
-  height: 135px;
+  height: 134px;
   background-color: #FFE17F;
 }
 
@@ -290,6 +315,7 @@ body {
 }
 
 .gallery {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -297,7 +323,38 @@ body {
 }
 
 .gallery-button {
-  height: 50px;
+  position: absolute;
+  margin: 0;
+  padding: 30px 10px;
+  width: 20px;
+  height: 60px;
+  border: 0;
+  background-repeat: no-repeat;
+}
+
+.slider-prev {
+  background-image: url(/images/slider-prev.jpg);
+  top: 210px;
+  left: 30px;
+}
+
+.slider-next {
+  background-image: url(/images/slider-next.jpg);
+  top: 210px;
+  right: 0;
+}
+
+.gallery-button:hover {
+  opacity: 0.6;
+}
+
+.gallery-button:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.gallery-button:active {
+  opacity: 0.3;
+  outline: none;
 }
 
 .advantage {
@@ -311,7 +368,7 @@ body {
   font-size: 50px;
   line-height: 50px;
   margin-top: 40px;
-  margin-bottom: 30px;
+  margin-bottom: 29px;
 }
 
 .advantage-description {
@@ -320,9 +377,12 @@ body {
 }
 
 .advantage-link {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 50px;
-  min-height: 40px;
+  width: 220px;
+  height: 40px;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   line-height: 21px;
@@ -330,7 +390,29 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.2em;
+}
 
+.advantage-link::before {
+  content: "";
+  display: block;
+  width: 220px;
+  height: 8px;
+  background-image: url(/images/batton-style.png);
+  position: absolute;
+  z-index: -1;
+}
+
+.advantage-link:hover {
+  background-color: #FFE17F;
+}
+
+.advantage-link:focus {
+outline: 2px solid #AF4FFF;
+}
+
+.advantage-link:active {
+  background-color: #FFCC33;
+  outline: none;
 }
 
 .advantage-table {
@@ -358,12 +440,48 @@ body {
 
 .slider-pagination {
   display: flex;
-  justify-content: center;
+  margin-left: 503px;
+  width: 76px;
 }
 
 .slider-pagination-item {
   list-style: none;
+  margin-right: 19px;
 }
+
+.slider-pagination-item:last-child {
+  margin: 0;
+}
+
+.slider-pagination-button {
+  width: 12px;
+  height: 12px;
+  margin: 0;
+  padding: 0;
+  border: 3px solid #000000;
+  border-radius: 50%;
+}
+
+.slider-pagination-button-current {
+  background-color: #000000;
+}
+
+.slider-pagination-button:hover {
+  opacity: 0.6;
+}
+
+.slider-pagination-button:focus {
+outline: 2px solid #AF4FFF;
+}
+
+.slider-pagination-button:active {
+  opacity: 0.3;
+  outline: none;
+}
+
+
+
+/* SECTION PRODUCT */
 
 .product {
   width: 1160px;
@@ -382,13 +500,27 @@ body {
   margin-right: 40px;
 }
 
+.product-item:last-child {
+  margin-right: 0;
+}
+
 .product-link {
   color: inherit;
   text-decoration: none;
 }
 
-.product-item:last-child {
-  margin-right: 0;
+.product-link:hover .product-wrapper {
+  background-color: #FFC700;
+}
+
+.product-link:active {
+  opacity: 0.3;
+  outline: none;
+}
+
+.product-link:focus .product-wrapper,
+.product-link:focus .product-desc {
+  outline: 2px solid #AF4FFF;
 }
 
 .product-wrapper {
@@ -406,7 +538,12 @@ body {
   letter-spacing: -0.02em;
   margin-top: 32px;
   margin-bottom: 0;
+  line-height: 24px;
 }
+
+
+
+/* SECTION SERVICE */
 
 .service {
   background: linear-gradient(to bottom, #FFFFFF 35%, #F0F0F0 35%);
