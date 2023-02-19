@@ -699,6 +699,10 @@ body {
 }
 
 .service-container {
+  display: none;
+}
+
+.service-container-active {
   position: relative;
   display: flex;
   width: 1160px;
@@ -821,10 +825,24 @@ body {
   color: #444444;
 }
 
-.service-img {
+.service-img-delivery {
   width: 136px;
   height: 164px;
   background-image: url(/images/delivery.png);
+  margin: 75px 0 0 105px;
+}
+
+.service-img-warranty {
+  width: 171px;
+  height: 195px;
+  background-image: url(/images/warranty.png);
+  margin: 75px 0 0 105px;
+}
+
+.service-img-сredit {
+  width: 156px;
+  height: 188px;
+  background-image: url(/images/credit.png);
   margin: 75px 0 0 105px;
 }
 
