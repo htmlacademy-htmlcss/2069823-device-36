@@ -442,19 +442,24 @@ body {
 }
 
 .popular-list {
-  position: relative;
   bottom: 150px;
   margin: 0;
   padding: 0;
 }
 
 .popular-item {
-  display: flex;
+  display: none;
   justify-content: space-between;
+}
+
+.popular-item-active {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .gallery {
   position: relative;
+  bottom: 150px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -499,6 +504,8 @@ body {
 .advantage {
   width: 560px;
   margin-top: 80px;
+  position: relative;
+  bottom: 150px;
 }
 
 .advantage-title {
@@ -557,6 +564,13 @@ body {
 .advantage-table {
   display: grid;
   grid-template-columns: max-content max-content;
+  column-gap: 20px;
+  row-gap: 12px;
+}
+
+.advantage-table-three-columns {
+  display: grid;
+  grid-template-columns: max-content max-content max-content;
   column-gap: 20px;
   row-gap: 12px;
 }
