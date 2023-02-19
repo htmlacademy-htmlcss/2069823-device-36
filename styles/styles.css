@@ -227,6 +227,141 @@ body {
   outline: none;
 }
 
+.popover {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: -60px;
+  z-index: 1;
+  box-sizing: border-box;
+  width: 320px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  background-color: #000;
+  min-height: 200px;
+}
+
+.popover::before {
+  content: "";
+  width: 14px;
+  height: 6px;
+  position: absolute;
+  background-image: url(/images/popover.svg);
+  background-repeat: no-repeat;
+  top: -6px;
+  left: 50%;
+}
+
+.popover-content {
+  height: 100%;
+}
+
+.basket-item {
+  display: grid;
+  grid-template-columns: 1fr 10px;
+  padding: 20px;
+}
+
+.basket-item-link {
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.basket-items-list {
+  margin: 0;
+  padding: 0;
+}
+
+.popover-basket {
+  width: 320px;
+}
+
+.basket-item-title {
+  display: block;
+  margin: 0;
+  padding: 0;
+  margin-left: 23px;
+  font-size: 16px;
+  line-height: 20px;
+  color: inherit;
+}
+
+.basket-button-remove {
+  width: 10px;
+  height: 10px;
+  border: none;
+  background-color: #000000;
+  background-image: url(/images/basket-close.svg);
+  background-repeat: no-repeat;
+}
+
+.basket-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  min-height: 44px;
+  background-color: #1a1a1a;
+}
+
+.basket-total-title {
+  font-size: 16px;
+  line-height: 20px;
+  color: inherit;
+}
+
+.basket-link {
+  display: block;
+  margin: 20px;
+  padding: 15px ;
+  list-style: none;
+  text-decoration: none;
+  color: #000000;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.2em;
+  background-color: #ffffff;
+}
+
+.basket-item-link:hover,
+.basket-button-remove:hover {
+  opacity: 0.6;
+}
+
+.basket-item-link:focus,
+.basket-button-remove:focus {
+  outline: 2px solid #af4fff;
+}
+
+.basket-item-link:active,
+.basket-button-remove:active {
+  outline: none;
+  opacity: 0.3;
+}
+
+.basket-link:hover {
+  background-color: #ffe17f;
+}
+
+.basket-link:focus {
+  outline: 2px solid #af4fff;
+}
+
+.basket-link:active {
+  outline: none;
+  color: #979797;
+}
+
+.basket-link:disabled {
+  opacity: 0.3;
+}
+
 .navigation-list-main {
   margin: 0;
   padding: 0;
