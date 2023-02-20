@@ -90,6 +90,7 @@ body {
   list-style-type: none;
 }
 
+
 .navigation-link {
   color: inherit;
   text-decoration: none;
@@ -377,6 +378,7 @@ body {
 }
 
 .navigation-button-main {
+  position: relative;
   width: 50px;
   height: 50px;
   background-image: url(/images/button-plus.svg);
@@ -406,8 +408,56 @@ body {
   outline: none;
 }
 
+
+.navigation-button-main:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
 .navigation-button-main:focus {
   outline: 2px solid #af4fff;
+  z-index: 5;
+}
+
+.navigation-button-main:active {
+  opacity: 0.3;
+  outline: none;
+}
+
+.navigation-main-subcatalog {
+  display: none;
+  grid-template-columns: 222px 211px 211px;
+  column-gap: 30px;
+  padding: 33px 60px 27px 60px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 35px;
+  left: -60px;
+  width: 1160px;
+  min-height: 180px;
+  background-color: #ffe17f;
+  z-index: 2;
+}
+
+.navigation-item-subcatalog {
+  list-style: none;
+}
+
+.navigation-link-sub {
+  display: block;
+  font-size: 16px;
+  line-height: 18px;
+  text-decoration: none;
+  color: #000000;
+  margin-bottom: 18px;
+}
+
+.navigation-item-main:focus-within .navigation-main-subcatalog {
+  display: grid;
+}
+
+.navigation-item-main:focus-within .navigation-button-main {
+  z-index: 3;
 }
 
 /* MAIN */
