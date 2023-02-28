@@ -441,5 +441,43 @@
         </div>
       </div>
     </footer>
+    <div class="modal-container">
+      <div class="modal">
+        <div class="modal-content">
+          <h2 class="modal-title">Доставка под заказ</h2>
+          <button class="modal-close-button">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+        </div>
+        <form class="modal-form" action="" method="post">
+          <fieldset class="modal-fieldset">
+            <legend class="visually-hidden">Форма заказа достаки товара</legend>
+            <ul class="modal-list">
+              <li class="modal-list-item">
+                <label class="modal-label " for="-modal-name">Ваше имя:</label>
+                <input class="modal-input modal-input-name" type="text" name="name" id="modal-name" placeholder="Введите имя" required>
+              </li>
+              <li class="modal-list-item">
+                <label class="modal-label " for="modal-email">Ваш e-mail:</label>
+                <input class="modal-input modal-input-email" type="email" name="user-email" id="modal-email" placeholder="Введите email" required>
+              </li>
+              <li class="modal-list-item">
+                <label class="modal-label " for="modal-product">Что нужно привезти:</label>
+                <input class="modal-input modal-input-product" type="text" name="modal-product" id="modal-product" placeholder="В свободной форме" required>
+              </li>
+              <li class="modal-list-item">
+                <label class="modal-label " for="modal-volume">Количество:</label>
+                <div class="modal-volume-wrapper">
+                  <button class="modal-button-minus" type="button"></button>
+                  <input class="modal-input modal-input-volume" type="number" name="modal-volume" id="modal-volume" value="1" required>
+                  <button class="modal-button-plus" type="button"></button>
+                </div>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="modal-button" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
