@@ -449,27 +449,36 @@
             <span class="visually-hidden">Закрыть</span>
           </button>
         </div>
-        <form class="modal-form" action="" method="post">
+        <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset class="modal-fieldset">
             <legend class="visually-hidden">Форма заказа достаки товара</legend>
             <ul class="modal-list">
               <li class="modal-list-item">
-                <label class="modal-label " for="-modal-name">Ваше имя:</label>
+                <label class="modal-label" for="modal-name">Ваше имя:</label>
                 <input class="modal-input modal-input-name" type="text" name="name" id="modal-name" placeholder="Введите имя" required>
               </li>
               <li class="modal-list-item">
-                <label class="modal-label " for="modal-email">Ваш e-mail:</label>
+                <label class="modal-label" for="modal-email">Ваш e-mail:</label>
                 <input class="modal-input modal-input-email" type="email" name="user-email" id="modal-email" placeholder="Введите email" required>
+                <p class="email-erorr">Забавный у вас адрес</p>
               </li>
               <li class="modal-list-item">
-                <label class="modal-label " for="modal-product">Что нужно привезти:</label>
+                <label class="modal-label" for="modal-product">Что нужно привезти:</label>
                 <input class="modal-input modal-input-product" type="text" name="modal-product" id="modal-product" placeholder="В свободной форме" required>
               </li>
               <li class="modal-list-item">
-                <label class="modal-label " for="modal-volume">Количество:</label>
+                <span class="modal-label">
+                  <label class="modal-label" for="modal-volume">Количество:</label>
+                  <span class="tooltip">
+                    <button class="tooltip-toggle" type="button">
+                      <svg class="tooltip-icon" width="26" height="26" viewBox="0 0 26 26" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><circle cx="13" cy="13" r="13" fill="#FFE17F"/><path d="M14 7h-2v2h2V7ZM14 11h-2v8h2v-8Z" fill="#000"/></svg>
+                      <span class="tooltip-text">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.</span>
+                    </button>
+                  </span>
+                </span>
                 <div class="modal-volume-wrapper">
                   <button class="modal-button-minus" type="button"></button>
-                  <input class="modal-input modal-input-volume" type="number" name="modal-volume" id="modal-volume" value="1" required>
+                  <input class="modal-input modal-input-volume" type="text" name="modal-volume" id="modal-volume" placeholder="1" required>
                   <button class="modal-button-plus" type="button"></button>
                 </div>
               </li>

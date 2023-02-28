@@ -2001,17 +2001,18 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(240, 240, 240, 0.9);
-  z-index: 1;
+  z-index: 2;
 }
 
 .modal {
+  box-sizing: border-box;
   position: relative;
   width: 920px;
   margin: auto;
-  padding: 72px 80px;
+  padding: 62px 70px;
   background-color: #ffffff;
-  outline: 10px solid #000000;
-  box-sizing: border-box;
+  border: 10px solid #000000;
+  z-index: -1;
 }
 
 .modal-content {
@@ -2059,6 +2060,7 @@ body {
   display: flex;
   flex-direction: column;
   list-style: none;
+  margin-bottom: 42px;
 }
 
 .modal-input {
@@ -2066,7 +2068,6 @@ body {
   font-size: 16px;
   padding: 20px;
   line-height: 20px;
-  margin-bottom: 62px;
   background-color: #f0f0f0;
   border: none;
 }
@@ -2074,10 +2075,25 @@ body {
 .modal-input-name {
   width: 360px;
   margin-right: 40px;
+  background-image: url(/images/modal-input-name.svg);
+  background-repeat: no-repeat;
+  background-position: right 20px center;
 }
+
 
 .modal-input-email {
   width: 360px;
+  background-image: url(/images/modal-input-email.svg);
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+}
+
+.email-erorr {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ff3d3d;
 }
 
 .modal-input-product {
@@ -2087,9 +2103,11 @@ body {
 
 .modal-input-volume{
   width: 60px;
+  text-align: center;
 }
 
 .modal-label {
+  position: relative;
   margin-bottom: 14px;
   font-weight: 700;
   font-size: 18px;
@@ -2123,8 +2141,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 190px;
-  height: 20px;
+  width: 200px;
+  height: 40px;
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   font-weight: 800;
@@ -2133,6 +2151,7 @@ body {
   text-transform: uppercase;
   border: none;
   background: none;
+  z-index: 1;
 }
 
 .modal-button::before {
@@ -2142,4 +2161,46 @@ body {
   height: 8px;
   background-image: url(/images/batton-style.png);
   z-index: -1;
+}
+
+.tooltip {
+  position: absolute;
+  top: -3px;
+  left: 120px;
+  width: 26px;
+  height: 26px;
+}
+
+.tooltip-toggle {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.tooltip-icon {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.tooltip-text {
+  background-color: #000000;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 19px;
+  width: 200px;
+  text-align: start;
+  position: absolute;
+  top: 30px;
+  left: -180px;
+  display: none;
+}
+
+.tooltip-toggle:hover .tooltip-text,
+.tooltip-toggle:focus .tooltip-text {
+  display: block;
 }
