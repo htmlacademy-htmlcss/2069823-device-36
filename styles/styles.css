@@ -1614,7 +1614,7 @@ body {
   font-weight: 700;
   line-height: 20px;
   letter-spacing: -0.02em;
-  margin-bottom: 28px;
+  margin-bottom: 20px;
   border-top: 2px solid #000000;
 }
 
@@ -1627,7 +1627,7 @@ body {
 .range-scale {
   position: relative;
   height: 2px;
-  margin-bottom: 12px;
+  margin: 8px 0 11px;
   background-color: #dcdcdc;
 }
 
@@ -1638,6 +1638,7 @@ body {
 }
 
 .range-toggle {
+  display: block;
   position: absolute;
   width: 18px;
   height: 18px;
@@ -1700,8 +1701,69 @@ body {
 }
 
 .control {
+  position: relative;
+  display: block;
+  padding-left: 36px;
   font-size: 16px;
   line-height: 20px;
+}
+
+.control-mark {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000000;
+  border-radius: 3px;
+}
+
+.control:hover {
+  opacity: 0.6;
+}
+
+.control:active {
+  opacity: 0.3;
+}
+
+.control:disabled {
+  opacity: 0.1;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before {
+  content: "";
+  background-image: url(../images/select.svg);
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+}
+
+.catalog-filter-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.catalog-filter-item:not(:last-child) {
+  margin-bottom: 17px;
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  background-color: #242424;
+  border-radius: 50%;
 }
 
 .filter-button {
@@ -1745,7 +1807,7 @@ body {
 
 /* CATALOG PRODOCT */
 
-.catolog-right-column {
+.catalog-right-column {
   width: 840px;
   background-color: #fff;
 }
