@@ -56,8 +56,7 @@ body {
 .page-header {
   width: 1160px;
   min-height: 155px;
-  margin: 0 auto;
-  margin-top: 40px;
+  margin: 40px auto 0;
   color: #000000;
   background-color: #ffe17f;
   font-style: normal;
@@ -282,9 +281,8 @@ body {
 
 .basket-item-title {
   display: block;
-  margin: 0;
   padding: 0;
-  margin-left: 23px;
+  margin: 0 0 0 23px;
   font-size: 16px;
   line-height: 20px;
   color: inherit;
@@ -316,7 +314,7 @@ body {
 .basket-link {
   display: block;
   margin: 20px;
-  padding: 15px ;
+  padding: 15px;
   list-style: none;
   text-decoration: none;
   color: #000000;
@@ -401,6 +399,7 @@ body {
 
 .navigation-main .navigation-link:focus {
   outline: 2px solid #af4fff;
+  z-index: 2;
 }
 
 .navigation-main .navigation-link:active {
@@ -431,7 +430,7 @@ body {
   padding: 33px 60px 27px 60px;
   box-sizing: border-box;
   position: absolute;
-  top: 35px;
+  top: 42px;
   left: -60px;
   width: 1160px;
   min-height: 180px;
@@ -861,8 +860,7 @@ body {
 }
 
 .service-title {
-  margin: 0;
-  margin-bottom: 34px;
+  margin: 0 0 34px;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 50px;
@@ -1370,6 +1368,7 @@ body {
   border-bottom: 2px solid #ffc700;
   outline: 2px solid #af4fff;
 }
+
 .footer-menu-link:active {
   color: #ffc700;
   border-bottom: 2px solid #ffc700;
@@ -2186,7 +2185,7 @@ body {
   margin-right: 40px;
 }
 
-.modal-input-volume{
+.modal-input-volume {
   width: 60px;
   text-align: center;
 }
