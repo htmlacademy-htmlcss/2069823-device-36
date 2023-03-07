@@ -204,17 +204,19 @@ body {
 }
 
 .basket-counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
-  text-align: center;
   width: 21px;
   height: 21px;
   border-radius: 50%;
   background-color: #ffffff;
   position: absolute;
-  left: -8px;
-  top: 12px;
+  left: -7px;
+  top: 10px;
 }
 
 .navigation-button-basket {
@@ -388,9 +390,22 @@ body {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: 1fr 127px 127px 127px;
+  grid-template-columns: 1fr 470px;
   align-items: center;
   gap: 45px;
+}
+
+.test-2 {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-item-test:not(:last-child) {
+  padding-right: 40px;
 }
 
 .navigation-item-main {
@@ -748,7 +763,7 @@ body {
 .product-list {
   display: flex;
   flex-wrap: wrap;
-  height: 253px;
+  min-height: 253px;
   margin: 0 auto;
   padding: 0;
 }
