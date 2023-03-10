@@ -47,6 +47,7 @@ body {
   border: 0;
   padding: 0;
   white-space: nowrap;
+  -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -218,6 +219,11 @@ body {
   position: absolute;
   left: -7px;
   top: 10px;
+  z-index: 2;
+}
+
+.navigation-basket:hover {
+  opacity: 0.6;
 }
 
 .navigation-button-basket {
@@ -387,7 +393,7 @@ body {
   background-color: none;
 }
 
-.navigation-list-main {
+.navigation-main {
   margin: 0;
   padding: 0;
   display: grid;
@@ -395,26 +401,25 @@ body {
   align-items: center;
 }
 
-.navigation-list-main-catalog {
+.navigation-main-catalog {
   margin-bottom: 20px;
 }
 
-
-.test-2 {
+.navigation-main-item,
+.navigation-main-list {
   display: flex;
   flex-wrap: wrap;
-}
-
-.navigation-item-main {
-  display: flex;
   align-items: center;
+  position: relative;
+  margin: 0;
+  padding: 0;
 }
 
-.navigation-item-test:not(:nth-child(3n)) {
+.navigation-item-main:not(:nth-child(3n)) {
   margin-right: 54px;
 }
 
-.navigation-item-test .navigation-link {
+.navigation-item-main .navigation-link {
   margin: -4px;
 }
 
@@ -518,15 +523,15 @@ body {
   margin-bottom: 18px;
 }
 
-.navigation-item-main:focus-within .navigation-main-subcatalog {
+.navigation-main-item:focus-within .navigation-main-subcatalog {
   display: grid;
 }
 
-.navigation-item-main:focus-within .navigation-button-main-svg {
+.navigation-main-item:focus-within .navigation-button-main-svg {
   opacity: 0;
 }
 
-.navigation-item-main:focus-within .navigation-button-main {
+.navigation-main-item:focus-within .navigation-button-main {
   background-image: url("../images/button-minus.svg");
   z-index: 3;
 }
@@ -1049,6 +1054,7 @@ body {
 .contacts {
   width: 532px;
   margin-left: 108px;
+  position: relative;
 }
 
 .about-item {
@@ -1143,10 +1149,6 @@ body {
 .about-link:active {
   background-color: #ffcc33;
   outline: none;
-}
-
-.contacts {
-  position: relative;
 }
 
 .contacts-title {
@@ -1321,12 +1323,11 @@ body {
 
 .field::placeholder {
   opacity: 0.5;
-  transition: color .8s;
 }
 
 .field:focus-visible {
   outline: none;
-  background-color: #DCDCDC;
+  background-color: #dcdcdc;
 }
 
 .field:disabled {
@@ -1334,7 +1335,7 @@ body {
 }
 
 .field:invalid:not(:placeholder-shown) {
-  border-bottom: 3px solid #FF3D3D;
+  border-bottom: 3px solid #ff3d3d;
   background-color: transparent;
 }
 
@@ -1471,6 +1472,7 @@ body {
   padding-bottom: 8px;
   color: #ffffff;
   font-style: normal;
+  -webkit-text-decoration-line: underline;
   text-decoration-line: underline;
 }
 
@@ -1763,6 +1765,7 @@ body {
   text-align: start;
   background-color: transparent;
   border: none;
+  -webkit-appearance: textfield;
   appearance: textfield;
 }
 
@@ -1773,6 +1776,7 @@ body {
 
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
   appearance: none;
   margin: 0;
 }
@@ -1815,16 +1819,6 @@ body {
 
 .control-input[type="checkbox"]:checked + .control-mark {
   border-color: #000000;
-}
-
-.control-input[type="checkbox"]:checked + .control-mark::before {
-  content: "";
-  background-image: url("../images/select.svg");
-  position: absolute;
-  top: 2px;
-  left: 3px;
-  width: 10px;
-  height: 10px;
 }
 
 .control-input[type="checkbox"]:checked + .control-mark::before {
@@ -2321,7 +2315,7 @@ body {
   font-size: 14px;
   visibility: hidden;
   opacity: 0;
-  color: #FF3D3D;
+  color: #ff3d3d;
 }
 
 .modal-input::placeholder {
@@ -2356,10 +2350,10 @@ body {
 }
 
 .modal-input-email:invalid:not(:placeholder-shown) {
-  outline: 2px solid #FF3D3D;
+  outline: 2px solid #ff3d3d;
 }
 
-.modal-input-email:invalid:not(:placeholder-shown) + .email-erorr{
+.modal-input-email:invalid:not(:placeholder-shown) + .email-erorr {
   visibility: visible;
   opacity: 1;
 }
@@ -2375,7 +2369,7 @@ body {
 }
 
 .modal-input-volume:invalid:not(:placeholder-shown) {
-  outline: 2px solid #FF3D3D;
+  outline: 2px solid #ff3d3d;
 }
 
 .modal-label {
@@ -2404,7 +2398,7 @@ body {
 }
 
 .modal-button-minus:hover:not(:disabled),
-.modal-button-minus:hover:not(:disabled) {
+.modal-button-plus:hover:not(:disabled) {
   cursor: pointer;
 }
 
